@@ -1,23 +1,50 @@
 ---
-layout: default
+layout: page
+title: OpenFV
 ---
 
-<div class="home">
+<p>OpenFV is now live! Github repository <a href="https://github.com/abhishekbajpayee/openfv">here.</a></p>
 
-  <h1 class="page-heading">Posts</h1>
+<p>OpenFV is the first comprehensive open source library focusing at 3D Particle Image/Tracking Velocimetry (PIV/PTV). As of now, OpenFV primarily supports:</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<ul>
+<li>Synthetic Aperture (SA) Reconstruction</li>
+<li>Tomographic Reconstruction</li>
+<li>3D PIV (window deformation supported)</li>
+<li>Relaxation based 3D Particle Tracking</li>
+<li>Synthetic Particle and Velocity Field Simulation</li>
+<li>All the features mentioned above are GPU and CPU parallelized to varying degrees.</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<p>OpenFV has been primarily developed by:</p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<ul>
+<li>Abhishek Bajpayee (MIT) | {% include icon-github.html username="abhishekbajpayee" %}</li>
+<li>Thomas Clark (Cambridge)</li>
+<li>Logan Ford (MIT) | {% include icon-github.html username="Loganford16" %}</li>
+</ul>
 
-</div>
+<p>If you use OpenFV for a research project, we would greatly appreciate if you could acknowledge us by citing us in your paper. For example, you can cite us by adding the following text to your LaTeX document:</p>
+
+{% highlight text %}
+The Open Source Flow Visualization (OpenFV, openfv.org) library
+\cite{bajpayee20143d, clark2012measurement} was used to conduct 
+the simulations, reconstructions and velocimetry for this study.
+{% endhighlight %}
+
+<p>and the following in your .bib file:</p>
+
+{% highlight text %}
+@phdthesis{bajpayee20143d,
+  title={3D particle tracking velocimetry using synthetic aperture imaging},
+  author={Bajpayee, Abhishek},
+  year={2014},
+  school={Massachusetts Institute of Technology}
+}
+@phdthesis{clark2012measurement,
+  title={Measurement of three-dimensional coherent fluid structure in high Reynolds number turbulent boundary layers},
+  author={Clark, Thomas Henry},
+  year={2012},
+  school={University of Cambridge}
+}
+{% endhighlight %}
