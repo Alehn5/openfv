@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Documentation
-permalink: ../openfv-docs/build/html
+permalink: /../openfv-docs/build/html
 ---
